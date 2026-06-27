@@ -25,7 +25,7 @@ def main() -> int:
         r = agent.ask(q)
         print(f"\nUSER: {q}")
         if r.escalated:
-            print(f"AGENT → 🤝 escalated ({r.reason}): {r.answer}")
+            print(f"AGENT (escalated, {r.reason}): {r.answer}")
         else:
             cites = ", ".join(f"[{i+1}] {s.doc}" for i, s in enumerate(r.sources))
             print(f"AGENT: {r.answer}\n       sources: {cites}")

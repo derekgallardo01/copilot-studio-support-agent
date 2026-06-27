@@ -97,13 +97,16 @@ class Agent:
     def __init__(self, docs_folder: str):
         self.retriever = Retriever(docs_folder)
 
-    def ask(self, question: str) -> AgentResponse:
+    def ask(self, question: str, context_questions: list[str] | None = None) -> AgentResponse:
+        # Sensitivity / scope checks always look at the bare current question so prior
+        # turns can't accidentally trip or mask the escalation rule.
         if _is_sensitive(question):
             return AgentResponse(
                 answer="I'm connecting you with a specialist who can help with this.",
                 sources=[], escalated=True, reason="sensitive topic",
             )
-        hits = self.retriever.search(question, k=2)
+        retrieval_query = " ".join((context_questions or []) + [question])
+        hits = self.retriever.search(retrieval_query, k=2)
         top_score = hits[0][1] if hits else 0.0
         if top_score < MIN_CONFIDENCE:
             return AgentResponse(

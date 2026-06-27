@@ -1,0 +1,18 @@
+[
+  {"id": "pw-reset", "question": "How do I reset my password?", "expect": {"escalated": false, "source": "it-support.md"}},
+  {"id": "pw-reset-paraphrase", "question": "I forgot my password, how can I get back in?", "expect": {"escalated": false, "source": "it-support.md"}},
+  {"id": "vpn-access", "question": "How do I connect to the VPN?", "expect": {"escalated": false, "source": "it-support.md"}},
+  {"id": "software-request", "question": "How do I request new software for my work device?", "expect": {"escalated": false, "source": "it-support.md"}},
+  {"id": "pto-days", "question": "How many PTO days do new employees get?", "expect": {"escalated": false, "source": "hr-policy.md"}},
+  {"id": "pto-carryover", "question": "Can unused PTO roll into next year?", "expect": {"escalated": false, "source": "hr-policy.md"}},
+  {"id": "working-hours", "question": "What are the standard working hours?", "expect": {"escalated": false, "source": "hr-policy.md"}},
+  {"id": "parental-leave", "question": "Am I eligible for parental leave?", "expect": {"escalated": false, "source": "hr-policy.md"}},
+  {"id": "security-incident", "question": "Who do I contact about a security incident?", "expect": {"escalated": false, "source": "security.md"}},
+  {"id": "mfa-policy", "question": "Do I need multi-factor authentication?", "expect": {"escalated": false, "source": "security.md"}},
+  {"id": "refund-sensitive", "question": "I want a refund on my subscription", "expect": {"escalated": true, "reason": "sensitive topic"}},
+  {"id": "cancel-sensitive", "question": "I would like to cancel my account today", "expect": {"escalated": true, "reason": "sensitive topic"}},
+  {"id": "salary-dispute-sensitive", "question": "I think there's a salary dispute with my paycheck", "expect": {"escalated": true, "reason": "sensitive topic"}},
+  {"id": "data-breach-sensitive", "question": "I think we might have a data breach", "expect": {"escalated": true, "reason": "sensitive topic"}},
+  {"id": "off-topic-swallow", "question": "What is the airspeed velocity of an unladen swallow?", "expect": {"escalated": true, "reason": "low confidence"}},
+  {"id": "off-topic-history", "question": "Tell me about the decline of the Roman Empire", "expect": {"escalated": true, "reason": "low confidence"}}
+]

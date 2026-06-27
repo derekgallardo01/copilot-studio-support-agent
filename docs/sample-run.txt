@@ -1,0 +1,34 @@
+=== Single-turn (sim/run.py): grounded answers + escalation ===
+
+USER: How do I reset my password?
+AGENT: # IT Support FAQ (sample)  ## Resetting your password You can reset your password from the self-service portal at portal.example.com. [1] # HR Policy Handbook (sample)  ## Paid time off (PTO) New employees receive 15 days of paid time off per year, accrued monthly. [2]
+       sources: [1] it-support.md, [2] hr-policy.md
+
+USER: How many PTO days do new employees get?
+AGENT: # HR Policy Handbook (sample)  ## Paid time off (PTO) New employees receive 15 days of paid time off per year, accrued monthly. [1] ## Requesting new software Submit a software request through the IT portal. [2]
+       sources: [1] hr-policy.md, [2] it-support.md
+
+USER: Who do I contact about a security incident?
+AGENT: # Information Security Policy (sample)  ## Reporting a security incident If you suspect a security incident — a lost device, a phishing email, or unauthorized access — contact the security team immediately at security@example.com or call the 24/7 hotline. [1] Contact IT support if your access is denied. [2]
+       sources: [1] security.md, [2] it-support.md
+
+USER: I want a refund on my subscription
+AGENT (escalated, sensitive topic): I'm connecting you with a specialist who can help with this.
+
+USER: What is the airspeed velocity of an unladen swallow?
+AGENT (escalated, low confidence): I don't have a confident answer — let me hand you to a team member.
+
+
+=== Multi-turn (Conversation): follow-up inherits context ===
+
+USER: How many PTO days do new employees get?
+AGENT: # HR Policy Handbook (sample)  ## Paid time off (PTO) New employees receive 15 days of paid time off per year, accrued monthly. [1] ## Requesting new software Submit a software request through the IT portal. [2]
+       sources: [1] hr-policy.md, [2] it-support.md
+
+USER: What about for managers?
+AGENT: # HR Policy Handbook (sample)  ## Paid time off (PTO) New employees receive 15 days of paid time off per year, accrued monthly. [1] # IT Support FAQ (sample)  ## Resetting your password You can reset your password from the self-service portal at portal.example.com. [2]
+       sources: [1] hr-policy.md, [2] it-support.md
+
+USER: And the carryover rules?
+AGENT: # HR Policy Handbook (sample)  ## Paid time off (PTO) New employees receive 15 days of paid time off per year, accrued monthly. [1] # IT Support FAQ (sample)  ## Resetting your password You can reset your password from the self-service portal at portal.example.com. [2]
+       sources: [1] hr-policy.md, [2] it-support.md
