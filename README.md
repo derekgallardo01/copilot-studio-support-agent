@@ -1,5 +1,7 @@
 # Copilot Studio support agent
 
+[![CI](https://github.com/derekgallardo01/copilot-studio-support-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/derekgallardo01/copilot-studio-support-agent/actions/workflows/ci.yml)
+
 A Microsoft 365 AI agent that answers staff and customer questions from your
 SharePoint documents, **cites its sources**, and **hands off to a human** when
 it's unsure or the topic is sensitive.
