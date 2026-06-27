@@ -1,0 +1,41 @@
+# Copilot Studio agent — declarative template
+# Recreate this in Copilot Studio (Agents > New). This file documents the
+# configuration so it versions in git and transfers between tenants.
+
+name: "Support Agent"
+description: >
+  Answers employee/customer questions grounded in approved SharePoint documents,
+  cites sources, and hands off to a human when unsure or when the topic is sensitive.
+
+instructions: |
+  You are a helpful support assistant for <Company>.
+  - Answer ONLY from the connected knowledge sources. If the answer isn't there,
+    say you don't know and offer to connect a human.
+  - Always cite the document you used.
+  - Never guess about refunds, cancellations, legal, HR disputes, or security
+    incidents — hand those to a human immediately.
+  - Be concise and friendly.
+
+knowledge_sources:
+  - type: sharepoint
+    site: "https://<tenant>.sharepoint.com/sites/<KnowledgeBase>"
+    libraries: ["Policies", "HR", "IT"]
+  # Add Dataverse / public website / uploaded files as needed.
+
+generative_ai:
+  mode: generative          # answer over knowledge sources
+  content_moderation: high
+  # Data handling: configure for privacy / no public-model training.
+
+escalation:
+  # Mirrors sim/agent.py: escalate on sensitive topic OR low confidence.
+  sensitive_topics: [refund, cancel account, legal, complaint, data breach,
+                     termination, salary dispute]
+  low_confidence_action: handoff
+  handoff:
+    channel: "Microsoft Teams"   # or live agent / ticket
+    message: "Connecting you with a team member who can help."
+
+channels:
+  - microsoft_teams
+  - web_chat

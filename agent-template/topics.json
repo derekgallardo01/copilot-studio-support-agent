@@ -1,0 +1,28 @@
+{
+  "_comment": "Topics map user intents to behaviour. In Copilot Studio these become Topics with trigger phrases; here they document the design.",
+  "topics": [
+    {
+      "name": "Answer from knowledge",
+      "trigger_phrases": ["how do I", "what is", "where can I find", "policy on"],
+      "action": "generative_answer_with_citations"
+    },
+    {
+      "name": "Escalate — sensitive",
+      "trigger_phrases": ["refund", "cancel my account", "legal", "complaint",
+                          "data breach", "fired", "salary dispute"],
+      "action": "handoff_to_human",
+      "reason": "sensitive topic"
+    },
+    {
+      "name": "Fallback — low confidence",
+      "trigger_phrases": [],
+      "action": "handoff_to_human",
+      "reason": "no confident answer in knowledge sources"
+    },
+    {
+      "name": "Greeting",
+      "trigger_phrases": ["hi", "hello", "hey"],
+      "action": "greet_and_offer_help"
+    }
+  ]
+}
