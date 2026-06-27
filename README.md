@@ -68,13 +68,17 @@ Full captured run (single-turn + multi-turn follow-ups inheriting context):
 
 ## Evaluation
 
-A golden Q&A set under [evals/golden.json](evals/golden.json) covers grounded
-answers across HR / IT / Security docs plus sensitive-topic and low-confidence
-escalations.
+Two corpora ship in the repo to prove the kit isn't a one-trick pony:
+
+- **Workplace corpus** (HR / IT / Security) — 16 cases in [evals/golden.json](evals/golden.json).
+- **SaaS support corpus** (product / billing / troubleshooting) — 14 cases in [evals/golden-saas.json](evals/golden-saas.json) against [sim/data-saas/](sim/data-saas/).
 
 ```bash
 $ python evals/run.py
-Eval: 16/16 passed (100%)
+Eval (golden.json): 16/16 passed (100%)
+
+$ python evals/run.py golden-saas.json sim/data-saas
+Eval (golden-saas.json): 14/14 passed (100%)
 ```
 
 How to add cases (real-world failure capture, adversarial prompts, paraphrases) is

@@ -18,7 +18,9 @@ jobs:
         run: pip install --quiet pytest
       - name: Unit tests
         run: python -m pytest sim/tests/ -q
-      - name: Eval harness (golden Q&A set)
+      - name: Eval harness — workplace corpus (HR / IT / Security)
         run: python evals/run.py
+      - name: Eval harness — SaaS support corpus (product / billing / troubleshooting)
+        run: python evals/run.py golden-saas.json sim/data-saas
       - name: Smoke-test the demo
         run: python sim/run.py

@@ -1,0 +1,16 @@
+[
+  {"id": "saas-pricing", "question": "How much does the Team plan cost?", "expect": {"escalated": false, "source": "product-features.md"}},
+  {"id": "saas-storage", "question": "How much storage does the Starter plan include?", "expect": {"escalated": false, "source": "product-features.md"}},
+  {"id": "saas-annual-discount", "question": "Is there a discount for annual billing?", "expect": {"escalated": false, "source": "billing-faq.md"}},
+  {"id": "saas-sso", "question": "Does the product support SSO with Okta?", "expect": {"escalated": false, "source": "product-features.md"}},
+  {"id": "saas-mobile-offline", "question": "Do the mobile apps work offline?", "expect": {"escalated": false, "source": "product-features.md"}},
+  {"id": "saas-payment-methods", "question": "Can I pay by bank transfer?", "expect": {"escalated": false, "source": "billing-faq.md"}},
+  {"id": "saas-add-seats", "question": "How do I add new seats to my subscription?", "expect": {"escalated": false, "source": "billing-faq.md"}},
+  {"id": "saas-tax", "question": "Does my invoice include VAT?", "expect": {"escalated": false, "source": "billing-faq.md"}},
+  {"id": "saas-sign-in", "question": "I cannot sign in - what should I try first?", "expect": {"escalated": false, "source": "troubleshooting.md"}},
+  {"id": "saas-upload-fail", "question": "Why does my file upload keep failing?", "expect": {"escalated": false, "source": "troubleshooting.md"}},
+  {"id": "saas-integration-broken", "question": "My Slack integration stopped syncing - how do I fix it?", "expect": {"escalated": false, "source": "troubleshooting.md"}},
+  {"id": "saas-refund-sensitive", "question": "I want a refund on last month's charge", "expect": {"escalated": true, "reason": "sensitive topic"}},
+  {"id": "saas-cancel-sensitive", "question": "I would like to cancel my account today", "expect": {"escalated": true, "reason": "sensitive topic"}},
+  {"id": "saas-off-topic", "question": "What is the capital of Belgium?", "expect": {"escalated": true, "reason": "low confidence"}}
+]
