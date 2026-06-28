@@ -1,6 +1,6 @@
 # Copilot Studio support agent
 
-[![CI](https://github.com/derekgallardo01/copilot-studio-support-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/derekgallardo01/copilot-studio-support-agent/actions/workflows/ci.yml)
+[![CI](https://github.com/derekgallardo01/copilot-studio-support-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/derekgallardo01/copilot-studio-support-agent/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) [![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)](#)
 
 **Live demo:** [derekgallardo01.github.io/copilot-studio-support-agent](https://derekgallardo01.github.io/copilot-studio-support-agent/) — sample Q&A transcripts (single-turn + multi-turn, both corpora), regenerated on every push.
 
