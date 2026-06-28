@@ -4,6 +4,11 @@
 
 **Live demo:** [derekgallardo01.github.io/copilot-studio-support-agent](https://derekgallardo01.github.io/copilot-studio-support-agent/) — sample Q&A transcripts (single-turn + multi-turn, both corpora), regenerated on every push.
 
+[![Live demo preview](docs/screenshots/02-hero.png)](https://derekgallardo01.github.io/copilot-studio-support-agent/)
+
+[Full-page capture (all 3 sections) →](docs/screenshots/01-overview-fullpage.png)
+
+
 A Microsoft 365 AI agent that answers staff and customer questions from your
 SharePoint documents, **cites its sources**, and **hands off to a human** when
 it's unsure or the topic is sensitive.
