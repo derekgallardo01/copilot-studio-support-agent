@@ -20,6 +20,16 @@ python -m pytest sim/tests/ -q
 
 Stdlib-only Python, no keys, no tenant required to run any of this.
 
+## Run in Docker
+
+```bash
+docker build -t copilot-studio-agent .
+docker run --rm copilot-studio-agent                                                # scripted demo
+docker run --rm copilot-studio-agent python evals/run.py                            # workplace eval set (HR/IT/Security)
+docker run --rm copilot-studio-agent python evals/run.py golden-saas.json sim/data-saas   # SaaS eval set
+docker run --rm -it copilot-studio-agent python sim/cli.py                          # interactive REPL
+```
+
 ## The problem it solves
 
 Teams lose hours every week answering the same routine HR/IT questions, and most
