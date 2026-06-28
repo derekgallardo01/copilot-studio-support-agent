@@ -1,0 +1,24 @@
+{
+  "repo": "copilot-studio-support-agent",
+  "title": "Copilot Studio Support Agent",
+  "tagline": "Microsoft 365 AI agent that cites SharePoint docs, escalates sensitive topics to a human, and ships with a golden eval set.",
+  "kicker": "Microsoft 365 \u00b7 AI Agent \u00b7 Capability Demo",
+  "features": [
+    {
+      "label": "Tests",
+      "value": "9 pytest"
+    },
+    {
+      "label": "Eval cases",
+      "value": "30 across 2 corpora"
+    },
+    {
+      "label": "Live demo",
+      "value": "GitHub Pages"
+    }
+  ],
+  "theme": {
+    "primary": "#1f5673",
+    "accent": "#2c7da0"
+  }
+}
