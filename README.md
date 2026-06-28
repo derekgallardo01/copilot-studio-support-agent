@@ -39,6 +39,14 @@ docker run --rm copilot-studio-agent python evals/run.py golden-saas.json sim/da
 docker run --rm -it copilot-studio-agent python sim/cli.py                          # interactive REPL
 ```
 
+## Example: production scenario
+
+**[examples/customer_session.py](examples/customer_session.py)** — 6-turn employee support session demonstrating retrieval + citations + sensitive-topic escalation in one run
+
+```bash
+python examples/customer_session.py
+```
+
 ## The problem it solves
 
 Teams lose hours every week answering the same routine HR/IT questions, and most
